@@ -2,7 +2,7 @@ import deckArray from './deckObj'; //import entire deck
 
 var minorDeckArray = [];
 
-function createMinor() {    //create Minor Arcana deck from imported entire deck
+function createMinor() { //create Minor Arcana deck from imported entire deck
     for (let i = 22; i < 78; i++) {
         minorDeckArray.push(deckArray[i]);
     }
@@ -13,7 +13,7 @@ console.log('minorDeckArray===>', minorDeckArray);
 
 var majorDeckArray = [];
 
-function createMajor() {    //create Major Arcana deck from imported entire deck
+function createMajor() { //create Major Arcana deck from imported entire deck
     for (let i = 0; i < 22; i++) {
         majorDeckArray.push(deckArray[i]);
     }
@@ -22,18 +22,16 @@ createMajor();
 console.log('majorDeckArray===>', majorDeckArray);
 
 
-var deckToShuffle = deckArray;  //set default deck to use for shuffle() & turn() to entire deck
+var deckToShuffle = deckArray; //set default deck to use for shuffle() & turn() to entire deck
 
 /** begin set deckToShuffleArray based on selected option in dropdown*/
 var deckSelectId = document.getElementById('deckSelect');
-var deckSelectValue = deckSelectId.options[deckSelectId.selectedIndex].value;
-console.log('deckSelectValue===>', deckSelectValue);
-
-document.getElementById('deckSelect').addEventListener('change', () => {
-    console.log('selectedDeck==>', document.getElementsByTagName('option')[deckSelectId.selectedIndex].value);
-
-    if (document.getElementsByTagName('option')[deckSelectId.selectedIndex].value !== 'fullDeck') {
-        if (document.getElementsByTagName('option')[deckSelectId.selectedIndex].value == 'majorDeck') {
+deckSelectId.addEventListener('change', () => {
+    var deckSelectId = document.getElementById('deckSelect');
+    var deckSelectValue = deckSelectId.options[deckSelectId.selectedIndex].value;
+    console.log('selectedDeck==>', deckSelectValue);
+    if (deckSelectValue !== 'fullDeck') {
+        if (deckSelectValue == 'majorDeck') {
             deckToShuffle = majorDeckArray;
         } else {
             deckToShuffle = minorDeckArray;
