@@ -3,7 +3,7 @@ import deckArray from './deckObj'; //import entire deck
 var minorDeckArray = [];
 
 function createMinor() {    //create Minor Arcana deck from imported entire deck
-    for (let i = 0; i < 3; i++) {
+    for (let i = 22; i < 78; i++) {
         minorDeckArray.push(deckArray[i]);
     }
 }
@@ -14,7 +14,7 @@ console.log('minorDeckArray===>', minorDeckArray);
 var majorDeckArray = [];
 
 function createMajor() {    //create Major Arcana deck from imported entire deck
-    for (let i = 3; i < 6; i++) {
+    for (let i = 0; i < 22; i++) {
         majorDeckArray.push(deckArray[i]);
     }
 }
@@ -57,6 +57,9 @@ function shuffle(deckToShuffle) {
     }
     //end Durstenfeld shuffle
     console.log('shuffled deckToShuffle==>', deckToShuffle);
+
+    //todo: make initial cards displayed be back of cards at z-index=2, then when turn() called,
+    //set z-index to 0, while maintaining z-index of shuffled card images at 1 
 
     deckToShuffle.forEach(function () {
         var image = document.createElement('img');
