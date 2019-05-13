@@ -1,5 +1,12 @@
 import deckArray from './deckObj'; //import entire deck
 
+const shuffleButton = document.getElementById('shuffle');
+const turnButton = document.getElementById('turn');
+const shuffImg = document.body.children.shuffDiv;
+const selecImg = document.body.children.selectDiv;
+
+var selectedArray = [];
+
 var minorDeckArray = [];
 
 function createMinor() { //create Minor Arcana deck from imported entire deck
@@ -43,11 +50,8 @@ deckSelectId.addEventListener('change', () => {
 /** end set deckToShuffleArray based on selected option in dropdown*/
 
 
-const shuffleButton = document.getElementById('shuffle');
-const turnButton = document.getElementById('turn');
-
-
 function shuffle(deckToShuffle) {
+    selectedArray = []; //clear previous selectedArray
     //begin Durstenfeld shuffle
     for (let i = deckToShuffle.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -64,7 +68,7 @@ function shuffle(deckToShuffle) {
         image.src = '../img/cardimg/rider-waite-original-back.jpg';
         image.width = "100";
         image.height = "171";
-        document.body.appendChild(image);
+        document.getElementById('shuffDiv').appendChild(image);
     });
 }
 
@@ -73,7 +77,7 @@ function turn() {
     deckToShuffle.forEach(function (card) {
         var image = document.createElement('img');
         Math.random() > .5 ? image.src = card.imgSrcUp : image.src = card.imgSrcDn; //flip coin for up or down card
-        document.body.appendChild(image);
+        document.getElementById('selectDiv').appendChild(image);
     });
     //end assign images to shuffled cards & allow for upright/reversed cards
     console.log('shuffled deckToShuffle after coin toss==>', deckToShuffle);
@@ -81,8 +85,8 @@ function turn() {
 
 shuffleButton.addEventListener('click', () => {
     //if there are cards present from a previous shuffle, remove them
-    while (document.body.getElementsByTagName('img').length > 0) {
-        document.body.removeChild(document.body.lastElementChild);
+    while (shuffImg.children.length > 0) {
+        shuffImg.removeChild(shuffImg.lastElementChild);
     }
     //then do shuffle
     shuffle(deckToShuffle)
@@ -90,9 +94,21 @@ shuffleButton.addEventListener('click', () => {
 
 turnButton.addEventListener('click', () => {
     //if there are cards present from a previous shuffle, remove them
-    while (document.body.getElementsByTagName('img').length > 0) {
-        document.body.removeChild(document.body.lastElementChild);
+    while (selecImg.children.length > 0) {
+        selecImg.removeChild(selecImg.lastElementChild);
     }
     //then do turn
     turn();
+});
+
+document.getElementById('shuffDiv').addEventListener('click', function (e) { //push clicked card into selectedArray & make clicked card from shuffled deck invisible
+    const nodelistShuff = document.querySelectorAll('#shuffDiv');
+    var shuffArray = Array.from(nodelistShuff);
+    var shuffArr = Array.from(shuffArray[0].children);
+    var index = shuffArr.indexOf(e.target)
+    console.log(index);
+    selectedArray.push(deckToShuffle[index]);
+    console.log('selectedArray===>', selectedArray);
+    console.log('e.target==>', e.target)
+    e.target.style.visibility = 'hidden';
 });
