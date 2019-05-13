@@ -1,7 +1,7 @@
 import deckArray from './deckObj'; //import entire deck
 
 const shuffleButton = document.getElementById('shuffle');
-const turnButton = document.getElementById('turn');
+//const turnButton = document.getElementById('turn');
 const shuffImg = document.body.children.shuffDiv;
 const selecImg = document.body.children.selectDiv;
 
@@ -52,6 +52,12 @@ deckSelectId.addEventListener('change', () => {
 
 function shuffle(deckToShuffle) {
     selectedArray = []; //clear previous selectedArray
+
+    //if there are selected cards present from a previous shuffle, remove them
+    while (selecImg.children.length > 0) {
+        selecImg.removeChild(selecImg.lastElementChild);
+    }
+
     //begin Durstenfeld shuffle
     for (let i = deckToShuffle.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -68,17 +74,6 @@ function shuffle(deckToShuffle) {
         document.getElementById('shuffDiv').appendChild(image);
     });
 }
-
-// function turn() {
-//     //begin assign images to shuffled cards & allow for upright/reversed cards
-//     deckToShuffle.forEach(function (card) {
-//         var image = document.createElement('img');
-//         Math.random() > .5 ? image.src = card.imgSrcUp : image.src = card.imgSrcDn; //flip coin for up or down card
-//         document.getElementById('selectDiv').appendChild(image);
-//     });
-//     //end assign images to shuffled cards & allow for upright/reversed cards
-//     console.log('shuffled deckToShuffle after coin toss==>', deckToShuffle);
-// }
 
 function turnSelected() {
     //begin assign images to shuffled cards & allow for upright/reversed cards
@@ -99,16 +94,6 @@ shuffleButton.addEventListener('click', () => {
     //then do shuffle
     shuffle(deckToShuffle)
 });
-
-// turnButton.addEventListener('click', () => {
-//     //if there are cards present from a previous shuffle, remove them
-//     while (selecImg.children.length > 0) {
-//         selecImg.removeChild(selecImg.lastElementChild);
-//     }
-//     //then do turn
-//     turn();
-// });
-
 
 //push clicked card into selectedArray & make clicked card from shuffled deck invisible;
 document.getElementById('shuffDiv').addEventListener('click', function (e) {
