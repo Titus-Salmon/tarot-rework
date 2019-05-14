@@ -1,9 +1,10 @@
 import deckArray from './deckObj'; //import entire deck
 
 const shuffleButton = document.getElementById('shuffle');
-//const turnButton = document.getElementById('turn');
+const readingButton = document.getElementById('getReading');
 const shuffImg = document.body.children.shuffDiv;
 const selecImg = document.body.children.selectDiv;
+const deckSelectId = document.getElementById('deckSelect');
 
 var selectedArray = [];
 
@@ -32,9 +33,7 @@ console.log('majorDeckArray===>', majorDeckArray);
 var deckToShuffle = deckArray; //set default deck to use for shuffle() to entire deck
 
 /** begin set deckToShuffleArray based on selected option in dropdown*/
-var deckSelectId = document.getElementById('deckSelect');
 deckSelectId.addEventListener('change', () => {
-    var deckSelectId = document.getElementById('deckSelect');
     var deckSelectValue = deckSelectId.options[deckSelectId.selectedIndex].value;
     console.log('selectedDeck==>', deckSelectValue);
     if (deckSelectValue !== 'fullDeck') {
@@ -75,25 +74,21 @@ function shuffle(deckToShuffle) {
     });
 }
 
-function turnSelected() {
-    //begin assign images to shuffled cards & allow for upright/reversed cards
-    selectedArray.forEach(function (card) {
-        var image = document.createElement('img');
-        Math.random() > .5 ? image.src = card.imgSrcUp : image.src = card.imgSrcDn; //flip coin for up or down card
-        document.getElementById('selectDiv').appendChild(image);
-    });
-    //end assign images to shuffled cards & allow for upright/reversed cards
-    console.log('shuffled deckToShuffle after coin toss==>', deckToShuffle);
-}
-
 shuffleButton.addEventListener('click', () => {
     //if there are cards present from a previous shuffle, remove them
     while (shuffImg.children.length > 0) {
         shuffImg.removeChild(shuffImg.lastElementChild);
     }
+    //if there are reading results present from a previous reading, remove them
+    var readingUl = document.getElementById('readingUl');
+    while (readingUl.children.length > 0) {
+        readingUl.removeChild(readingUl.lastElementChild);
+    }
     //then do shuffle
     shuffle(deckToShuffle)
 });
+
+
 
 //push clicked card into selectedArray & make clicked card from shuffled deck invisible;
 document.getElementById('shuffDiv').addEventListener('click', function (e) {
@@ -109,7 +104,44 @@ document.getElementById('shuffDiv').addEventListener('click', function (e) {
     if (deckToShuffle[index] !== undefined && e.target.style.visibility !== 'hidden') { //turn over clicked card in #selectDiv
         e.target.style.visibility = 'hidden';
         var image = document.createElement('img');
+
+        // function removeCardData_imageUp() {
+        //     delete deckToShuffle[index].imgSrcUp;
+        //     image.src = deckToShuffle[index].imgSrcDn;
+        // }
+
+        // function removeCardData_imageDn() {
+        //     delete deckToShuffle[index].imgSrcDn;
+        //     image.src = deckToShuffle[index].imgSrcUp;
+        // }
         Math.random() > .5 ? image.src = deckToShuffle[index].imgSrcUp : image.src = deckToShuffle[index].imgSrcDn; //flip coin for up or down card
+        //Math.random() > .5 ? removeCardData_imageUp() : removeCardData_imageDn(); //flip coin for up or down card
         document.getElementById('selectDiv').appendChild(image);
+    }
+});
+
+readingButton.addEventListener('click', () => {
+    console.log('your reading', selectedArray);
+    //if there are reading results present from a previous reading, remove them
+    var readingUl = document.getElementById('readingUl');
+    while (readingUl.children.length > 0) {
+        readingUl.removeChild(readingUl.lastElementChild);
+    }
+    for (let i = 0; i < selectedArray.length; i++) {
+        if (selectedArray[i].imgSrcUp) {
+            console.log(selectedArray[i].imgSrcUp);
+            var readingUl = document.getElementById('readingUl');
+            var readingLi = document.createElement('li');
+            var readingLiText = document.createTextNode(selectedArray[i].descUp);
+            readingLi.appendChild(readingLiText);
+            readingUl.appendChild(readingLi);
+        } else {
+            console.log(selectedArray[i].imgSrcDn);
+            var readingUl = document.getElementById('readingUl');
+            var readingLi = document.createElement('li');
+            var readingLiText = document.createTextNode(selectedArray[i].descDn);
+            readingLi.appendChild(readingLiText);
+            readingUl.appendChild(readingLi);
+        }
     }
 });
