@@ -97,7 +97,9 @@ document.getElementById('shuffDiv').addEventListener('click', function (e) {
     var shuffArr = Array.from(shuffArray[0].children);
     var index = shuffArr.indexOf(e.target)
     console.log(index);
-    selectedArray.push(deckToShuffle[index]);
+    if (index > -1) {
+        selectedArray.push(deckToShuffle[index]);
+    }
     console.log('selectedArray===>', selectedArray);
     console.log('e.target==>', e.target)
 
@@ -105,15 +107,6 @@ document.getElementById('shuffDiv').addEventListener('click', function (e) {
         e.target.style.visibility = 'hidden';
         var image = document.createElement('img');
 
-        // function removeCardData_imageUp() {
-        //     delete deckToShuffle[index].imgSrcUp;
-        //     image.src = deckToShuffle[index].imgSrcDn;
-        // }
-
-        // function removeCardData_imageDn() {
-        //     delete deckToShuffle[index].imgSrcDn;
-        //     image.src = deckToShuffle[index].imgSrcUp;
-        // }
         Math.random() > .5 ? image.src = deckToShuffle[index].imgSrcUp : image.src = deckToShuffle[index].imgSrcDn; //flip coin for up or down card
         //Math.random() > .5 ? removeCardData_imageUp() : removeCardData_imageDn(); //flip coin for up or down card
         document.getElementById('selectDiv').appendChild(image);
