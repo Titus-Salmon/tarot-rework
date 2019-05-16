@@ -2,30 +2,33 @@
 
 <head>
     <title>vanillaTarot</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
+    <div class="container1">
+        <select id="deckSelect">
+            <option value="fullDeck">Major & Minor Arcana</option>
+            <option value="majorDeck">Major Arcana</option>
+            <option value="minorDeck">Minor Arcana</option>
+        </select>
 
-    <select id="deckSelect">
-        <option value="fullDeck">Major & Minor Arcana</option>
-        <option value="majorDeck">Major Arcana</option>
-        <option value="minorDeck">Minor Arcana</option>
-    </select>
+        <div id="shuffDiv"></div>
 
-    <div id="shuffDiv"></div>
+        <button id="shuffle">Shuffle Deck</button>
 
-    <button id="shuffle">Shuffle Deck</button>
-    
-    <div id="selectDiv"></div>
+        <div id="selectDiv"></div>
 
-    <button id="getReading">Get Reading</button>
+        <button id="getReading">Get Reading</button>
 
-    <div id="readingDiv">
-        <ul id="readingUl"></ul>
+        <div id="readingDiv">
+            <ul id="readingUl"></ul>
+        </div>
+
+
+        <script src="../js/shuffle.js" type="module"></script>
     </div>
-    
 
-    <script src="../js/shuffle.js" type="module"></script>
 </body>
 
 </html>

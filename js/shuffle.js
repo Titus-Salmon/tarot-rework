@@ -2,8 +2,8 @@ import deckArray from './deckObj'; //import entire deck
 
 const shuffleButton = document.getElementById('shuffle');
 const readingButton = document.getElementById('getReading');
-const shuffImg = document.body.children.shuffDiv;
-const selecImg = document.body.children.selectDiv;
+const shuffImg = document.getElementById('shuffDiv');
+const selecImg = document.getElementById('selectDiv');
 const deckSelectId = document.getElementById('deckSelect');
 
 var selectedArray = [];
@@ -87,7 +87,6 @@ shuffleButton.addEventListener('click', () => {
     //then do shuffle
     shuffle(deckToShuffle)
 });
-
 
 
 //push clicked card into selectedArray & make clicked card from shuffled deck invisible;
