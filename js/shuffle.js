@@ -88,6 +88,8 @@ shuffleButton.addEventListener('click', () => {
     shuffle(deckToShuffle)
 });
 
+var up_dn_array = [];
+
 
 //push clicked card into selectedArray & make clicked card from shuffled deck invisible;
 document.getElementById('shuffDiv').addEventListener('click', function (e) {
@@ -108,6 +110,8 @@ document.getElementById('shuffDiv').addEventListener('click', function (e) {
 
         Math.random() > .5 ? image.src = deckToShuffle[index].imgSrcUp : image.src = deckToShuffle[index].imgSrcDn; //flip coin for up or down card
         //Math.random() > .5 ? removeCardData_imageUp() : removeCardData_imageDn(); //flip coin for up or down card
+        up_dn_array.push(image.src);
+        console.log('up_dn_array==>', up_dn_array)
         document.getElementById('selectDiv').appendChild(image);
     }
 });
@@ -119,20 +123,40 @@ readingButton.addEventListener('click', () => {
     while (readingUl.children.length > 0) {
         readingUl.removeChild(readingUl.lastElementChild);
     }
-    for (let i = 0; i < selectedArray.length; i++) {
-        if (selectedArray[i].imgSrcUp) {
-            console.log(selectedArray[i].imgSrcUp);
-            var readingUl = document.getElementById('readingUl');
-            var readingLi = document.createElement('li');
-            var readingLiText = document.createTextNode(selectedArray[i].descUp);
-            readingLi.appendChild(readingLiText);
-            readingUl.appendChild(readingLi);
-        } else {
+
+    for (let i = 0; i < up_dn_array.length; i++) {
+        var reg1 = /r.jpg/; //regexp to check whether image is upright or reversed
+        if (up_dn_array[i].match(reg1)) {
             console.log(selectedArray[i].imgSrcDn);
             var readingUl = document.getElementById('readingUl');
             var readingLi = document.createElement('li');
-            var readingLiText = document.createTextNode(selectedArray[i].descDn);
-            readingLi.appendChild(readingLiText);
+            var readingLi_name = document.createElement('h4');
+            var readingLi_name_text = document.createTextNode(selectedArray[i].name + ' (dn)');
+            readingLi_name.appendChild(readingLi_name_text);
+
+            var readingLi_desc = document.createElement('p');
+            var readingLi_desc_text = document.createTextNode(selectedArray[i].descDn);
+            readingLi_desc.appendChild(readingLi_desc_text);
+
+            readingLi.appendChild(readingLi_name);
+            readingLi.appendChild(readingLi_desc);
+
+            readingUl.appendChild(readingLi);
+        } else {
+            console.log(selectedArray[i].imgSrcUp);
+            var readingUl = document.getElementById('readingUl');
+            var readingLi = document.createElement('li');
+            var readingLi_name = document.createElement('h4');
+            var readingLi_name_text = document.createTextNode(selectedArray[i].name + ' (up)');
+            readingLi_name.appendChild(readingLi_name_text);
+
+            var readingLi_desc = document.createElement('p');
+            var readingLi_desc_text = document.createTextNode(selectedArray[i].descUp);
+            readingLi_desc.appendChild(readingLi_desc_text);
+
+            readingLi.appendChild(readingLi_name);
+            readingLi.appendChild(readingLi_desc);
+
             readingUl.appendChild(readingLi);
         }
     }
