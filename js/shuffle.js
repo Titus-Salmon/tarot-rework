@@ -84,6 +84,12 @@ shuffleButton.addEventListener('click', () => {
     while (readingUl.children.length > 0) {
         readingUl.removeChild(readingUl.lastElementChild);
     }
+    //add (2a) instructions
+    var shuffInstr = document.createElement('h3');
+    var shuffInstr_text = document.createTextNode('(2a) Click cards to select from deck');
+    shuffInstr.appendChild(shuffInstr_text);
+    shuffImg.appendChild(shuffInstr);
+    
     //then do shuffle
     shuffle(deckToShuffle)
 });
@@ -130,6 +136,7 @@ readingButton.addEventListener('click', () => {
             console.log(selectedArray[i].imgSrcDn);
             var readingUl = document.getElementById('readingUl');
             var readingLi = document.createElement('li');
+            readingLi.style.listStyle = 'none';
             var readingLi_name = document.createElement('h4');
             var readingLi_name_text = document.createTextNode(selectedArray[i].name + ' (dn)');
             readingLi_name.appendChild(readingLi_name_text);
@@ -146,6 +153,7 @@ readingButton.addEventListener('click', () => {
             console.log(selectedArray[i].imgSrcUp);
             var readingUl = document.getElementById('readingUl');
             var readingLi = document.createElement('li');
+            readingLi.style.listStyle = 'none';
             var readingLi_name = document.createElement('h4');
             var readingLi_name_text = document.createTextNode(selectedArray[i].name + ' (up)');
             readingLi_name.appendChild(readingLi_name_text);

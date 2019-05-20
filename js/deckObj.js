@@ -32,14 +32,14 @@ var c4 = {
     imgSrcUp: '../img/cardimg/04.jpg',
     imgSrcDn: '../img/cardimg/04r.jpg',
     descUp: 'Stability, power, protection, realization; a great person; aid, reason, conviction; also authority and will.',
-    descDn: ''
+    descDn: 'Benevolence, compassion, credit; also confusion to enemies, obstruction, immaturity.'
 }
 var c5 = {
     name: 'The Hierophant',
     imgSrcUp: '../img/cardimg/05.jpg',
     imgSrcDn: '../img/cardimg/05r.jpg',
     descUp: 'Marriage, alliance, captivity, servitude; by another account, mercy and goodness; inspiration; the man to whom the Querent has recourse.',
-    descDn: 'Benevolence, compassion, credit; also confusion to enemies, obstruction, immaturity.'
+    descDn: 'Society, good understanding, concord, overkindness, weakness.'
 }
 var c6 = {
     name: 'The Lovers',
