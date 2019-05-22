@@ -297,71 +297,71 @@ var c42 = {
     name: 'Seven of Cups',
     imgSrcUp: '../img/cardimg/42.jpg',
     imgSrcDn: '../img/cardimg/42r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Fairy favours, images of reflection, sentiment, imagination, things seen in the glass of contemplation; some attainment in these degrees, but nothing permanent or substantial is suggested.',
+    descDn: 'Desire, will, determination, project.'
 }
 var c43 = {
     name: 'Eight of Cups',
     imgSrcUp: '../img/cardimg/43.jpg',
     imgSrcDn: '../img/cardimg/43r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'The card speaks for itself on the surface, but other readings are entirely antithetical--giving joy, mildness, timidity, honour, modesty. In practice, it is usually found that the card shews the decline of a matter, or that a matter which has been thought to be important is really of slight consequence--either for good or evil.',
+    descDn: 'Great joy, happiness, feasting.'
 }
 var c44 = {
     name: 'Nine of Cups',
     imgSrcUp: '../img/cardimg/44.jpg',
     imgSrcDn: '../img/cardimg/44r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Concord, contentment, physical bien-être; also victory, success, advantage; satisfaction for the Querent or person for whom the consultation is made.',
+    descDn: 'Truth, loyalty, liberty; but the readings vary and include mistakes, imperfections, etc.'
 }
 var c45 = {
     name: 'Ten of Cups',
     imgSrcUp: '../img/cardimg/45.jpg',
     imgSrcDn: '../img/cardimg/45r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Contentment, repose of the entire heart; the perfection of that state; also perfection of human love and friendship; if with several picture-cards, a person who is taking charge of the Querent\'s interests; also the town, village or country inhabited by the Querent.',
+    descDn: 'Repose of the false heart, indignation, violence.'
 }
 var c46 = {
     name: 'Page of Cups',
     imgSrcUp: '../img/cardimg/46.jpg',
     imgSrcDn: '../img/cardimg/46r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Fair young man, one impelled to render service and with whom the Querent will be connected; a studious youth; news, message; application, reflection, meditation; also these things directed to business.',
+    descDn: 'Taste, inclination, attachment, seduction, deception, artifice.'
 }
 var c47 = {
     name: 'Knight of Cups',
     imgSrcUp: '../img/cardimg/47.jpg',
     imgSrcDn: '../img/cardimg/47r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Arrival, approach--sometimes that of a messenger; advances, proposition, demeanour, invitation, incitement.',
+    descDn: 'Trickery, artifice, subtlety, swindling, duplicity, fraud.'
 }
 var c48 = {
     name: 'Queen of Cups',
     imgSrcUp: '../img/cardimg/48.jpg',
     imgSrcDn: '../img/cardimg/48r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Good, fair woman; honest, devoted woman, who will do service to the Querent; loving intelligence, and hence the gift of vision; success, happiness, pleasure; also wisdom, virtue; a perfect spouse and a good mother.',
+    descDn: 'The accounts vary; good woman; otherwise, distinguished woman but one not to be trusted; perverse woman; vice, dishonour, depravity.'
 }
 var c49 = {
     name: 'King of Cups',
     imgSrcUp: '../img/cardimg/49.jpg',
     imgSrcDn: '../img/cardimg/49r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Fair man, man of business, law, or divinity; responsible, disposed to oblige the Querent; also equity, art and science, including those who profess science, law and art; creative intelligence.',
+    descDn: 'Dishonest, double-dealing man; roguery, exaction, injustice, vice, scandal, pillage, considerable loss.'
 }
 var c50 = {
     name: 'Ace of Swords',
     imgSrcUp: '../img/cardimg/50.jpg',
     imgSrcDn: '../img/cardimg/50r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Triumph, the excessive degree in everything, conquest, triumph of force. It is a card of great force, in love as well as in hatred. The crown may carry a much higher significance than comes usually within the sphere of fortune-telling.',
+    descDn: 'Triumph, the excessive degree in everything, conquest, triumph of force, but the results are disastrous; another account says--conception, childbirth, augmentation, multiplicity.'
 }
 var c51 = {
     name: 'Two of Swords',
     imgSrcUp: '../img/cardimg/51.jpg',
     imgSrcDn: '../img/cardimg/51r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Conformity and the equipoise which it suggests, courage, friendship, concord in a state of arms; another reading gives tenderness, affection, intimacy. The suggestion of harmony and other favourable readings must be considered in a qualified manner, as Swords generally are not symbolical of beneficent forces in human affairs.',
+    descDn: 'Imposture, falsehood, duplicity, disloyalty.'
 }
 var c52 = {
     name: 'Three of Swords',
