@@ -367,36 +367,36 @@ var c52 = {
     name: 'Three of Swords',
     imgSrcUp: '../img/cardimg/52.jpg',
     imgSrcDn: '../img/cardimg/52r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Removal, absence, delay, division, rupture, dispersion, and all that the design signifies naturally, being too simple and obvious to call for specific enumeration.',
+    descDn: 'Mental alienation, error, loss, distraction, disorder, confusion.'
 }
 var c53 = {
     name: 'Four of Swords',
     imgSrcUp: '../img/cardimg/53.jpg',
     imgSrcDn: '../img/cardimg/53r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Vigilance, retreat, solitude, hermit\'s repose, exile, tomb and coffin. It is these last that have suggested the design.',
+    descDn: 'Wise administration, circumspection, economy, avarice, precaution, testament.'
 }
 var c54 = {
     name: 'Five of Swords',
     imgSrcUp: '../img/cardimg/54.jpg',
     imgSrcDn: '../img/cardimg/54r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Degradation, destruction, revocation, infamy, dishonour, loss, with the variants and analogues of these.',
+    descDn: 'Burial, funeral rites.'
 }
 var c55 = {
     name: 'Six of Swords',
     imgSrcUp: '../img/cardimg/55.jpg',
     imgSrcDn: '../img/cardimg/55r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Journey by water, route, way, envoy, commissionary, expedient.',
+    descDn: 'Declaration, confession, publicity; one account says that it is a proposal of love.'
 }
 var c56 = {
     name: 'Seven of Swords',
     imgSrcUp: '../img/cardimg/56.jpg',
     imgSrcDn: '../img/cardimg/56r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Design, attempt, wish, hope, confidence; also quarrelling, a plan that may fail, annoyance. The design is uncertain in its import, because the significations are widely at variance with each other.',
+    descDn: 'Good advice, counsel, instruction, slander, babbling.'
 }
 var c57 = {
     name: 'Eight of Swords',
