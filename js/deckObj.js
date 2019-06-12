@@ -402,148 +402,148 @@ var c57 = {
     name: 'Eight of Swords',
     imgSrcUp: '../img/cardimg/57.jpg',
     imgSrcDn: '../img/cardimg/57r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Bad news, violent chagrin, crisis, censure, power in trammels, conflict, calumny; also sickness.',
+    descDn: 'Disquiet, difficulty, opposition, accident, treachery; what is unforeseen; fatality.'
 }
 var c58 = {
     name: 'Nine of Swords',
     imgSrcUp: '../img/cardimg/58.jpg',
     imgSrcDn: '../img/cardimg/58r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Death, failure, miscarriage, delay, deception, disappointment, despair.',
+    descDn: 'Imprisonment, suspicion, doubt, reasonable fear, shame.'
 }
 var c59 = {
     name: 'Ten of Swords',
     imgSrcUp: '../img/cardimg/59.jpg',
     imgSrcDn: '../img/cardimg/59r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Whatsoever is intimated by the design; also pain, affliction, tears, sadness, desolation. It is not especially a card of violent death.',
+    descDn: 'Advantage, profit, success, favour, but none of these are permanent; also power and authority.'
 }
 var c60 = {
     name: 'Page of Swords',
     imgSrcUp: '../img/cardimg/60.jpg',
     imgSrcDn: '../img/cardimg/60r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Authority, overseeing, secret service, vigilance, spying, examination, and the qualities thereto belonging.',
+    descDn: 'The more evil side of these qualities: authority, overseeing, secret service, vigilance, spying, examination. What is unforeseen, the unprepared state, and sickness is also intimated.'
 }
 var c61 = {
     name: 'Knight of Swords',
     imgSrcUp: '../img/cardimg/61.jpg',
     imgSrcDn: '../img/cardimg/61r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Skill, bravery, capacity, defence, address, enmity, wrath, war, destruction, opposition, resistance, ruin. There is therefore a sense in which the card signifies death, but it carries this meaning only in its proximity to other cards of fatality.',
+    descDn: 'Imprudence, incapacity, extravagance.'
 }
 var c62 = {
     name: 'Queen of Swords',
     imgSrcUp: '../img/cardimg/62.jpg',
     imgSrcDn: '../img/cardimg/62r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Widowhood, female sadness and embarrassment, absence, sterility, mourning, privation, separation.',
+    descDn: 'Malice, bigotry, artifice, prudery, bale, deceit.'
 }
 var c63 = {
     name: 'King of Swords',
     imgSrcUp: '../img/cardimg/63.jpg',
     imgSrcDn: '../img/cardimg/63r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Whatsoever arises out of the idea of judgment and all its connexions-power, command, authority, militant intelligence, law, offices of the crown, and so forth.',
+    descDn: 'Cruelty, perversity, barbarity, perfidy, evil intention.'
 }
 var c64 = {
     name: 'Ace of Pentacles',
     imgSrcUp: '../img/cardimg/64.jpg',
     imgSrcDn: '../img/cardimg/64r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Perfect contentment, felicity, ecstasy; also speedy intelligence; gold.',
+    descDn: 'The evil side of wealth, bad intelligence.'
 }
 var c65 = {
     name: 'Two of Pentacles',
     imgSrcUp: '../img/cardimg/65.jpg',
     imgSrcDn: '../img/cardimg/65r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'On the one hand it is represented as a card of gaiety, recreation and its connexions, which is the subject of the design; but it is read also as news and messages in writing, as obstacles, agitation, trouble, embroilment.',
+    descDn: 'Enforced gaiety, simulated enjoyment, literal sense, handwriting, composition, letters of exchange.'
 }
 var c66 = {
     name: 'Three of Pentacles',
     imgSrcUp: '../img/cardimg/66.jpg',
     imgSrcDn: '../img/cardimg/66r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Métier, trade, skilled labour; usually, however, regarded as a card of nobility, aristocracy, renown, glory.',
+    descDn: 'Mediocrity, in work and otherwise, puerility, pettiness, weakness.'
 }
 var c67 = {
     name: 'Four of Pentacles',
     imgSrcUp: '../img/cardimg/67.jpg',
     imgSrcDn: '../img/cardimg/67r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'The surety of possessions, cleaving to that which one has, gift, legacy, inheritance.',
+    descDn: 'Suspense, delay, opposition.'
 }
 var c68 = {
     name: 'Five of Pentacles',
     imgSrcUp: '../img/cardimg/68.jpg',
     imgSrcDn: '../img/cardimg/68r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'The card foretells material trouble above all, whether in the form illustrated--that is, destitution--or otherwise. For some cartomancists, it is a card of love and lovers-wife, husband, friend, mistress; also concordance, affinities. These alternatives cannot be harmonized.',
+    descDn: 'Disorder, chaos, ruin, discord, profligacy.'
 }
 var c69 = {
     name: 'Six of Pentacles',
     imgSrcUp: '../img/cardimg/69.jpg',
     imgSrcDn: '../img/cardimg/69r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Presents, gifts, gratification another account says attention, vigilance now is the accepted time, present prosperity, etc.',
+    descDn: 'Desire, cupidity, envy, jealousy, illusion.'
 }
 var c70 = {
     name: 'Seven of Pentacles',
     imgSrcUp: '../img/cardimg/70.jpg',
     imgSrcDn: '../img/cardimg/70r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'These are exceedingly contradictory; in the main, it is a card of money, business, barter; but one reading gives altercation, quarrels--and another innocence, ingenuity, purgation.',
+    descDn: 'Cause for anxiety regarding money which it may be proposed to lend.'
 }
 var c71 = {
     name: 'Eight of Pentacles',
     imgSrcUp: '../img/cardimg/71.jpg',
     imgSrcDn: '../img/cardimg/71r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Work, employment, commission, craftsmanship, skill in craft and business, perhaps in the preparatory stage.',
+    descDn: 'Voided ambition, vanity, cupidity, exaction, usury. It may also signify the possession of skill, in the sense of the ingenious mind turned to cunning and intrigue.'
 }
 var c72 = {
     name: 'Nine of Pentacles',
     imgSrcUp: '../img/cardimg/72.jpg',
     imgSrcDn: '../img/cardimg/72r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Prudence, safety, success, accomplishment, certitude, discernment.', 'Gain, riches; family matters, archives, extraction, the abode of a family.',
+    descDn: 'Roguery, deception, voided project, bad faith.'
 }
 var c73 = {
     name: 'Ten of Pentacles',
     imgSrcUp: '../img/cardimg/73.jpg',
     imgSrcDn: '../img/cardimg/73r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Application, study, scholarship, reflection another reading says news, messages and the bringer thereof; also rule, management.',
+    descDn: 'Chance, fatality, loss, robbery, games of hazard; sometimes gift, dowry, pension.'
 }
 var c74 = {
     name: 'Page of Pentacles',
     imgSrcUp: '../img/cardimg/74.jpg',
     imgSrcDn: '../img/cardimg/74r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Utility, serviceableness, interest, responsibility, rectitude-all on the normal and external plane.',
+    descDn: 'Prodigality, dissipation, liberality, luxury; unfavourable news.'
 }
 var c75 = {
     name: 'Knight of Pentacles',
     imgSrcUp: '../img/cardimg/75.jpg',
     imgSrcDn: '../img/cardimg/75r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Opulence, generosity, magnificence, security, liberty.',
+    descDn: 'Inertia, idleness, repose of that kind, stagnation; also placidity, discouragement, carelessness.'
 }
 var c76 = {
     name: 'Queen of Pentacles',
     imgSrcUp: '../img/cardimg/76.jpg',
     imgSrcDn: '../img/cardimg/76r.jpg',
-    descUp: '',
-    descDn: ''
+    descUp: 'Valour, realizing intelligence, business and normal intellectual aptitude, sometimes mathematical gifts and attainments of this kind; success in these paths.',
+    descDn: 'Evil, suspicion, suspense, fear, mistrust.'
 }
 var c77 = {
     name: 'King of Pentacles',
     imgSrcUp: '../img/cardimg/77.jpg',
     imgSrcDn: '../img/cardimg/77r.jpg',
     descUp: '',
-    descDn: ''
+    descDn: 'Vice, weakness, ugliness, perversity, corruption, peril.'
 }
 
 //end define cards as objects
