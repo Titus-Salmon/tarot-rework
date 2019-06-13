@@ -514,35 +514,35 @@ var c73 = {
     name: 'Ten of Pentacles',
     imgSrcUp: '../img/cardimg/73.jpg',
     imgSrcDn: '../img/cardimg/73r.jpg',
-    descUp: 'Application, study, scholarship, reflection another reading says news, messages and the bringer thereof; also rule, management.',
+    descUp: 'Gain, riches; family matters, archives, extraction, the abode of a family.',
     descDn: 'Chance, fatality, loss, robbery, games of hazard; sometimes gift, dowry, pension.'
 }
 var c74 = {
     name: 'Page of Pentacles',
     imgSrcUp: '../img/cardimg/74.jpg',
     imgSrcDn: '../img/cardimg/74r.jpg',
-    descUp: 'Utility, serviceableness, interest, responsibility, rectitude-all on the normal and external plane.',
+    descUp: 'Application, study, scholarship, reflection another reading says news, messages and the bringer thereof; also rule, management.',
     descDn: 'Prodigality, dissipation, liberality, luxury; unfavourable news.'
 }
 var c75 = {
     name: 'Knight of Pentacles',
     imgSrcUp: '../img/cardimg/75.jpg',
     imgSrcDn: '../img/cardimg/75r.jpg',
-    descUp: 'Opulence, generosity, magnificence, security, liberty.',
+    descUp: 'Utility, serviceableness, interest, responsibility, rectitude-all on the normal and external plane.',
     descDn: 'Inertia, idleness, repose of that kind, stagnation; also placidity, discouragement, carelessness.'
 }
 var c76 = {
     name: 'Queen of Pentacles',
     imgSrcUp: '../img/cardimg/76.jpg',
     imgSrcDn: '../img/cardimg/76r.jpg',
-    descUp: 'Valour, realizing intelligence, business and normal intellectual aptitude, sometimes mathematical gifts and attainments of this kind; success in these paths.',
+    descUp: 'Opulence, generosity, magnificence, security, liberty.',
     descDn: 'Evil, suspicion, suspense, fear, mistrust.'
 }
 var c77 = {
     name: 'King of Pentacles',
     imgSrcUp: '../img/cardimg/77.jpg',
     imgSrcDn: '../img/cardimg/77r.jpg',
-    descUp: '',
+    descUp: 'Valour, realizing intelligence, business and normal intellectual aptitude, sometimes mathematical gifts and attainments of this kind; success in these paths.',
     descDn: 'Vice, weakness, ugliness, perversity, corruption, peril.'
 }
 
