@@ -507,7 +507,7 @@ var c72 = {
     name: 'Nine of Pentacles',
     imgSrcUp: '../img/cardimg/72.jpg',
     imgSrcDn: '../img/cardimg/72r.jpg',
-    descUp: 'Prudence, safety, success, accomplishment, certitude, discernment.', 'Gain, riches; family matters, archives, extraction, the abode of a family.',
+    descUp: 'Prudence, safety, success, accomplishment, certitude, discernment.',
     descDn: 'Roguery, deception, voided project, bad faith.'
 }
 var c73 = {
