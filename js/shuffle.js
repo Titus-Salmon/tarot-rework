@@ -49,7 +49,7 @@ deckSelectId.addEventListener('change', () => {
 /** end set deckToShuffleArray based on selected option in dropdown*/
 
 
-function shuffle(deckToShuffle) {
+function shuffle() {
     selectedArray = []; //clear previous selectedArray
 
     //if there are selected cards present from a previous shuffle, remove them
@@ -58,12 +58,15 @@ function shuffle(deckToShuffle) {
     }
 
     //begin Durstenfeld shuffle
-    for (let i = deckToShuffle.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [deckToShuffle[i], deckToShuffle[j]] = [deckToShuffle[j], deckToShuffle[i]];
+    for (let i = deckToShuffle.length - 1; i > 0; i--) { //i starts at last index in deck & moves backwards to index #1
+        //(index #0 excluded, because there are no more swap options left)
+        const j = Math.floor(Math.random() * (i + 1)); //j is random integer generated between 1 and number of index
+        //we are currently at in loop
+        [deckToShuffle[i], deckToShuffle[j]] = [deckToShuffle[j], deckToShuffle[i]]; //i is swapped with j
+        //(the index we are at in loop is swapped with some random value less than or equal to its own value)
     }
     //end Durstenfeld shuffle
-    console.log('shuffled deckToShuffle==>', deckToShuffle);
+    console.log('shuffled deckToShuffle!!!!!==>', deckToShuffle);
 
     deckToShuffle.forEach(function () {
         var image = document.createElement('img');
@@ -91,7 +94,7 @@ shuffleButton.addEventListener('click', () => {
     shuffImg.appendChild(shuffInstr);
     
     //then do shuffle
-    shuffle(deckToShuffle)
+    shuffle()
 });
 
 var up_dn_array = [];
@@ -102,8 +105,8 @@ document.getElementById('shuffDiv').addEventListener('click', function (e) {
     const nodelistShuff = document.querySelectorAll('#shuffDiv');
     var shuffArray = Array.from(nodelistShuff);
     var shuffArr = Array.from(shuffArray[0].children);
-    var index = shuffArr.indexOf(e.target)
-    console.log(index);
+    var index = shuffArr.indexOf(e.target)-1; //fix bug that wouldn't allow choosing last card in shuffled deck
+    console.log('index==>', index);
     if (index > -1) {
         selectedArray.push(deckToShuffle[index]);
     }
