@@ -34,6 +34,24 @@ var deckToShuffle = deckArray; //set default deck to use for shuffle() to entire
 
 /** begin set deckToShuffleArray based on selected option in dropdown*/
 deckSelectId.addEventListener("change", () => {
+  //if there are cards present from a previous shuffle, remove them
+  while (shuffImg.children.length > 0) {
+    shuffImg.removeChild(shuffImg.lastElementChild);
+  }
+  //if there are reading results present from a previous reading, remove them
+  var readingUl = document.getElementById("readingUl");
+  while (readingUl.children.length > 0) {
+    readingUl.removeChild(readingUl.lastElementChild);
+  }
+
+  //if there are selected cards present from a previous shuffle, remove them
+  while (selecImg.children.length > 0) {
+    selecImg.removeChild(selecImg.lastElementChild);
+  }
+
+  //if there are up_dn_array results from previous shuffle, remove them
+  up_dn_array = [];
+
   var deckSelectValue = deckSelectId.options[deckSelectId.selectedIndex].value;
   console.log("selectedDeck==>", deckSelectValue);
   if (deckSelectValue !== "fullDeck") {
