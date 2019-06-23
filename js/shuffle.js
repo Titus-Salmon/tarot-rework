@@ -30,25 +30,38 @@ function createMajor() {
 createMajor();
 console.log("majorDeckArray===>", majorDeckArray);
 
+function clearShuffledCards() {
+  while (shuffImg.children.length > 0) {
+    shuffImg.removeChild(shuffImg.lastElementChild);
+  }
+}
+
+function clearReadingResults() {
+  var readingUl = document.getElementById("readingUl");
+  while (readingUl.children.length > 0) {
+    readingUl.removeChild(readingUl.lastElementChild);
+  }
+}
+
+function clearSelectedCards() {
+  while (selecImg.children.length > 0) {
+    selecImg.removeChild(selecImg.lastElementChild);
+  }
+}
+
 var deckToShuffle = deckArray; //set default deck to use for shuffle() to entire deck
 
 /** begin set deckToShuffleArray based on selected option in dropdown*/
 deckSelectId.addEventListener("change", () => {
   //if there are cards present from a previous shuffle, remove them
-  while (shuffImg.children.length > 0) {
-    shuffImg.removeChild(shuffImg.lastElementChild);
-  }
+  clearShuffledCards();
+ 
   //if there are reading results present from a previous reading, remove them
-  var readingUl = document.getElementById("readingUl");
-  while (readingUl.children.length > 0) {
-    readingUl.removeChild(readingUl.lastElementChild);
-  }
+  clearReadingResults();
 
   //if there are selected cards present from a previous shuffle, remove them
-  while (selecImg.children.length > 0) {
-    selecImg.removeChild(selecImg.lastElementChild);
-  }
-
+  clearSelectedCards();
+  
   //if there are up_dn_array results from previous shuffle, remove them
   up_dn_array = [];
 
@@ -70,10 +83,8 @@ function shuffle() {
   selectedArray = []; //clear previous selectedArray
 
   //if there are selected cards present from a previous shuffle, remove them
-  while (selecImg.children.length > 0) {
-    selecImg.removeChild(selecImg.lastElementChild);
-  }
-
+  clearSelectedCards();
+ 
   //begin Durstenfeld shuffle
   for (let i = deckToShuffle.length - 1; i > 0; i--) {
     //i starts at last index in deck & moves backwards to index #1
@@ -97,15 +108,11 @@ function shuffle() {
 
 shuffleButton.addEventListener("click", () => {
   //if there are cards present from a previous shuffle, remove them
-  while (shuffImg.children.length > 0) {
-    shuffImg.removeChild(shuffImg.lastElementChild);
-  }
+  clearShuffledCards();
+  
   //if there are reading results present from a previous reading, remove them
-  var readingUl = document.getElementById("readingUl");
-  while (readingUl.children.length > 0) {
-    readingUl.removeChild(readingUl.lastElementChild);
-  }
-
+  clearReadingResults();
+  
   //if there are up_dn_array results from previous shuffle, remove them
   up_dn_array = [];
 
@@ -154,11 +161,9 @@ document.getElementById("shuffDiv").addEventListener("click", function(e) {
 
 readingButton.addEventListener("click", () => {
   console.log("your reading", selectedArray);
+  
   //if there are reading results present from a previous reading, remove them
-  var readingUl = document.getElementById("readingUl");
-  while (readingUl.children.length > 0) {
-    readingUl.removeChild(readingUl.lastElementChild);
-  }
+  clearReadingResults();
 
   for (let i = 0; i < up_dn_array.length; i++) {
     var reg1 = /r.jpg/; //regexp to check whether image is upright or reversed
